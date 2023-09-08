@@ -17,6 +17,7 @@ const css = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
   
     button__home:{
@@ -100,57 +101,61 @@ const css = StyleSheet.create({
     marginTop: 10,
   },
 
-  //--------------------------------------------------------------------------
+  //-------------------------------Login------------------------------------------------------
 
-  darkbg:{
-    backgroundColor: "white"
-  },
-
-  login__logomarca:{
-    marginBottom: 10,
-    margin: 30,
-  },
-
-  login__msg:(text='none')=>({
-    fontWeight: "bold",
-    fontSize: 22,
-    color: 'red',
-    marginBottom: 15,
-    display: text,
-  }),
-
-  login__form:{
-    width: "85%",
-    height: '40%',
-    backgroundColor: '#f5f5f5',
+  backimg: {
+    backgroundColor:'white',
+    width: '100%',
+    borderBottomEndRadius: 160,
+    height: '20%',
     justifyContent: 'center',
-    borderRadius: 10,
+    alignItems: 'center',
+    marginTop: -25,
   },
 
-  login__input:{
-    backgroundColor: "#fff",
-    fontSize: 19,
-    padding: 7,
+  nadabranco: {
+    backgroundColor: 'white',
+    width: '100%',
+    height: '15%',
+    borderTopLeftRadius: 100,
+    borderTopRightRadius: 100,
+    marginBottom: -55
+  },
+
+  backcolor: {
+    backgroundColor: '#df7d0c',
+    justifyContent: 'space-around',
+  },
+
+  textinput: {
+    backgroundColor: 'white',
+    width: 350,
+    height: 50,
+    borderRadius: 25,
+    padding: 15,
     margin: 10,
-    marginBottom: 15,
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: 'black',
-    maxWidth: 350,
   },
 
-  login__button:{
-    padding: 12,
-    marginTop: 25,
-    backgroundColor: "red",
-    alignSelf: "center",
-    borderRadius: 5,
+  textinputbtn: {
+    backgroundColor: 'white',
+    width: 350,
+    height: 50,
+    borderRadius: 25,
+    padding: 15,
+    textAlign: 'center',
+    justifyContent: 'center',
+    margin: 10,
+    marginTop: 30,
   },
 
-  login__buttonText:{
-    fontWeight:"bold",
-    fontSize: 22,
-    color:"white",
+  input: {
+    margin: 10,
+  },
+
+  cadastro: {
+    color: 'white',
+    fontSize: 20,
+    marginTop: -100
   },
   //-------------------------------------------------
   area__tab: {
@@ -160,15 +165,6 @@ const css = StyleSheet.create({
     color: '#333'
   },
 
-  criador: {
-    height: '90%',
-    width: '80%',
-    marginTop: '8%',
-    marginLeft: '10%',
-    borderRadius: 10,
-    backgroundColor: 'white',
-  },
-
   shadowProp: {
     shadowColor: 'black',
     shadowOpacity: 0.26,
@@ -176,17 +172,6 @@ const css = StyleSheet.create({
     shadowRadius: 10,
     elevation: 2,
   },
-
-  vitor:{
-    backgroundColor: 'white',
-    margin: 25,
-    borderRadius: 10,
-    width: 280,
-    height: 170,
-    flex: 1,
-    flexDirection: 'row',
-  },
-
   img_cria: {
     width: 100,
     height: 150,
@@ -200,19 +185,19 @@ const css = StyleSheet.create({
     fontSize: 20,
     marginTop: 70,
   },
-  //------------------------------------------------------------------
+  //------------------------Home-------------------------------------
 
   home_input: {
-    height: 90,
-    width: 250,
-    backgroundColor: 'red',
-    margin: 15,
+    height: 60,
+    width: 350,
+    backgroundColor: '#df7d0c',
     padding: 10,
-    fontSize: 45,
+    fontSize: 25,
     color: 'white',
     justifyContent: 'center',
     textAlign: 'center',
-    borderRadius: 10,
+    borderRadius: 30,
+    marginTop: 350,
   },
   //--------------------------------------------------------------------------------
 

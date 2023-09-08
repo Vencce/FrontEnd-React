@@ -1,19 +1,14 @@
 import React from "react";
-import { View, Image, Text } from 'react-native';
-import { TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, } from 'react-native';
 import { css } from "../assets/css/Css";
+import { ImageBackground } from "react-native";
 
 export default function Home({navigation}) {
-
     return(
-        <View style={css.container2}>
-                <TouchableOpacity onPress={() =>  navigation.navigate('Login')}>
-                    <Text style={css.home_input}>Login</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => navigation.navigate('Criadores')}>
-                    <Text style={css.home_input}>Criadores</Text>
-                </TouchableOpacity>
-        </View>
+        <ImageBackground source={require('../assets/BgTi.jpg')} style={css.container2}>
+            <TouchableOpacity onPress={() =>  navigation.navigate('Login')}>
+                <Text style={css.home_input}>Login</Text>
+            </TouchableOpacity>
+        </ImageBackground>
     )
 }

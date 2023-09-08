@@ -13,15 +13,6 @@ export default function AreaRestrita({navigation}) {
     
     const [user,setUser]=useState(null);
     const Tab = createMaterialBottomTabNavigator();
-    
-    useEffect(()=>{
-        async function getUser(){
-            let response=await AsyncStorage.getItem('userData');
-            let json=JSON.parse(response);
-            setUser(json.name);
-        }
-        getUser();
-    },[]);
 
     useEffect(() => {
         const backAction = () => {

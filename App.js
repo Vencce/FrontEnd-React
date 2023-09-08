@@ -17,22 +17,10 @@ export default function App() {
           component={Home}
           options={{
             title: 'JS Móveis',
-            headerStyle:{backgroundColor:'red'},
-            headerTintColor: 'white',
-            headerTitleAlign: 'center',
+            headerShown:false,
           }}
         />
         <Stack.Screen name="Login" options={{headerShown:false}} component={Login} />
-        <Stack.Screen 
-          name="Criadores" 
-          component={Criadores}
-          options={{
-            title: 'Criadores',
-            headerStyle:{backgroundColor:'red'},
-            headerTintColor: 'white',
-            headerTitleAlign: 'center',
-          }}
-        />
         <Stack.Screen 
           name='AreaRestrita' 
           component={AreaRestrita}
