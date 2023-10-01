@@ -107,16 +107,16 @@ const css = StyleSheet.create({
     backgroundColor:'white',
     width: '100%',
     borderBottomEndRadius: 160,
-    height: '20%',
+    height: '25%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: -25,
+    marginTop: -60,
   },
 
   nadabranco: {
     backgroundColor: 'white',
     width: '100%',
-    height: '15%',
+    height: '16%',
     borderTopLeftRadius: 100,
     borderTopRightRadius: 100,
     marginBottom: -55
