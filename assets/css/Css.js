@@ -134,6 +134,11 @@ const css = StyleSheet.create({
     borderRadius: 25,
     padding: 15,
     margin: 10,
+    flexDirection: "row"
+  },
+
+  placeholderLogin: {
+    marginLeft: 10,
   },
 
   textinputbtn: {
@@ -141,13 +146,17 @@ const css = StyleSheet.create({
     width: 350,
     height: 50,
     borderRadius: 25,
-    padding: 15,
+    padding: 10,
     textAlign: 'center',
     justifyContent: 'center',
     margin: 10,
     marginTop: 30,
+    fontSize: 25,
+    color: 'grey',
   },
-
+  iconeye: {
+    marginLeft: '72%',
+  },
   input: {
     margin: 10,
   },
@@ -225,7 +234,12 @@ const css = StyleSheet.create({
 
   button__logout:{
     textAlign:'right'
-  }
+  },
+
+  PrinMoveis:{
+    fontSize: 40,
+    padding: 20,
+  },
 });
 
 export {css};

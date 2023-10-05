@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
 
 function Card(props) {
   return (
     <View style={styles.card}>
-      <View style={{ height: "100%", width: "45%" }}>
+      <View style={{ height: "100%", width: "100%" }}>
         <Image style={styles.moveis} source={{ uri: props.movel.foto.url }} />
       </View>
     </View>
@@ -14,13 +14,11 @@ function Card(props) {
 const styles = StyleSheet.create({
   card: {
     width: "90%",
-    backgroundColor: "white",
     height: 200,
     borderRadius: 10,
     flexDirection: "row",
     margin: 20,
     color: "white",
-    elevation: 15,
   },
   moveis: {
     resizeMode: "stretch",

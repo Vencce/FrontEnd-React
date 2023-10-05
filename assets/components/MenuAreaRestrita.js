@@ -4,7 +4,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { css } from "../css/Css";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-
 export default function MenuAreaRestrita(props){
 
     async function logout()

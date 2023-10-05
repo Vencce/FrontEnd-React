@@ -8,11 +8,11 @@ export default function Principal(){
     
     return (
         <Stack.Navigator initialRouteName="MoveisHead">
-               <Stack.Screen
-                    name="MoveisHead"
-                    component={MoveisHead}
-                    options={{ headerShown: false }}
-               />
+            <Stack.Screen
+                name="MoveisHead"
+                component={MoveisHead}
+                options={{ headerShown: false }}
+            />
         </Stack.Navigator>
     );
 }
