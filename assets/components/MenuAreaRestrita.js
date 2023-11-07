@@ -14,14 +14,14 @@ export default function MenuAreaRestrita(props){
 
     return (
         <View style={css.area__menu}>
-            <TouchableOpacity style={css.button__home2} onPress={()=>props.navigation.navigate('Principal')}>
-                <Icon name="home" size={20} color="#999" />
+            <TouchableOpacity style={css.button__home2}>
+                <Icon name="bars" size={20} color="#000" />
             </TouchableOpacity>
         
             <Text style={css.area__title}>{props.title}</Text>
 
             <TouchableOpacity style={css.button__logout} onPress={()=>logout()}>
-                <Icon name="sign-out" size={20} color="#999" />
+                <Icon name="sign-out" size={20} color="#000" />
             </TouchableOpacity>
         </View>
     );

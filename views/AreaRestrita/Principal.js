@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator()
 
-export default function Principal(){
+export default function Principal({navigation}){
     
     return (
         <Stack.Navigator initialRouteName="MoveisHead">

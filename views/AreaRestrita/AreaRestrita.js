@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import { BackHandler, Alert } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { css } from "../../assets/css/Css";
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -35,31 +34,35 @@ export default function AreaRestrita({navigation}) {
           'hardwareBackPress',
           backAction,
         );
+
+        
     
         return () => backHandler.remove();
       }, []);
 
     return(
         <Tab.Navigator
-            activeColor='#fff'
-            inactiveColor='#544E4E'
+            activeColor='white'
+            inactiveColor='#df7d0c'
             barStyle={css.area__tab}
+            labeled= {false}    
         >
             <Tab.Screen 
-                name="Principal" 
-                component={Principal} 
+                name="Principal"  
+                component={Principal}
                 options={{
                     tabBarIcon:()=>(
-                        <Icon name='home' size={20} color='#544E4E' />
+                        <Icon name='home' size={20} color='black' />
                     )
                 }}
+                
             />
             <Tab.Screen 
                 name="Favoritos" 
                 component={Favoritos}
                 options={{
                     tabBarIcon:()=>(
-                        <Icon name='heart' size={20} color='#544E4E' />
+                        <Icon name='heart' size={20} color='black' />
                     )
                 }}
             />
@@ -68,16 +71,16 @@ export default function AreaRestrita({navigation}) {
                 component={Carrinho}
                 options={{
                     tabBarIcon:()=>(
-                        <Icon name='shopping-cart' size={20} color='#544E4E' />
+                        <Icon name='shopping-cart' size={20} color='black' />
                     )
                 }}
             />
             <Tab.Screen 
-                name="Usuario" 
+                name="none" 
                 component={Usuario}
                 options={{
                     tabBarIcon:()=>(
-                        <Icon name='user' size={20} color='#544E4E' />
+                        <Icon name='user' size={20} color='black' />
                     )
                 }}
             />

@@ -103,11 +103,16 @@ const css = StyleSheet.create({
 
   //-------------------------------Login------------------------------------------------------
 
+  imgJS: {
+    width: '100%',
+    height: 100,
+  },
+
   backimg: {
     backgroundColor:'white',
     width: '100%',
     borderBottomEndRadius: 160,
-    height: '25%',
+    height: '22%',
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: -60,
@@ -163,15 +168,15 @@ const css = StyleSheet.create({
 
   cadastro: {
     color: 'white',
-    fontSize: 20,
-    marginTop: -100
+    fontSize: 20, 
   },
   //-------------------------------------------------
   area__tab: {
-    backgroundColor: '#333',
+    backgroundColor: '#fff',
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#333'
+    color: '#df7d0c',
+    height: '12%',
   },
 
   shadowProp: {
@@ -215,9 +220,9 @@ const css = StyleSheet.create({
     paddingTop: 40,
     paddingBottom: 10,
     width: '100%',
-    backgroundColor:'#111',
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    color: 'black'
   },
 
   button__home2:{
@@ -228,7 +233,7 @@ const css = StyleSheet.create({
     width: '80%',
     fontWeight:'bold',
     fontSize:20,
-    color:'#fff',
+    color:'#000',
     textAlign:'center'
   },
 
@@ -240,6 +245,56 @@ const css = StyleSheet.create({
     fontSize: 40,
     padding: 20,
   },
+  //-----------------------------------------------------------------------------------------//
+  
+  MenuPrincipal:{
+    height: 75,
+    width: '100%',
+    borderBottomColor: 'grey',
+    marginTop: '7%',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+
+  imgJS2: {
+    width: '70%',
+    height: 80,
+  },
+
+  imgmenu: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
+  },
+
+  //------------------------------------------Principal-Imagem----------------------------------------//
+
+  imgPrin: {
+    width: 150,
+    height: 150,
+  },
+
+  wellcome: {
+    width: '100%',
+    backgroundColor: 'orange',
+    padding: 10,
+    flexDirection: 'row'
+  },
+
+  text_bem: {
+    alignItems: 'center',
+    marginTop: '12%'
+  },
+
+  button_prin: {
+    width: 100,
+    backgroundColor: 'white',
+    textAlign: 'center',
+    color: 'orange',
+    borderRadius: 20,
+    marginTop: 10
+  }
+
 });
 
 export {css};

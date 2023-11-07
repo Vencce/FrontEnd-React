@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Home, Login, Cadastro} from './views/Routes/index'
 import AreaRestrita from './views/AreaRestrita/AreaRestrita';
 
-
 export default function App() {
 
   const Stack = createNativeStackNavigator();
@@ -12,27 +11,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen 
-          name="Home"
-          component={Home}
-          options={{
-            title: 'JS Móveis',
-            headerShown:false,
-          }}
-        />
-        <Stack.Screen name="Login" options={{headerShown:false}} component={Login} />
-        <Stack.Screen name="Cadastro" options={{headerShown:false}} component={Cadastro} />
-        <Stack.Screen 
+      <Stack.Screen 
           name='AreaRestrita' 
           component={AreaRestrita}
           options={{
             headerShown:false,
-            title: 'AreaRestrita',
-            headerStyle:{backgroundColor:'red'},
-            headerTintColor: 'white',
-            headerTitleAlign: 'center',
+            title: 'AreaRestrita'
           }}
         />
+        <Stack.Screen name="Login" options={{headerShown:false}} component={Login} />
+        <Stack.Screen name="Cadastro" options={{headerShown:false}} component={Cadastro} />
       </Stack.Navigator>
     </NavigationContainer>  
   );

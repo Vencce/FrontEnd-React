@@ -3,34 +3,15 @@ import { KeyboardAvoidingView, View, Image, TouchableOpacity, TextInput, Text, P
 import { css } from "../../assets/css/Css";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import loginApi from '../../seeders/services/login';
-import { userState } from '../recoil/atoms/auth';
+
 export default function Login({navigation}) {
     
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMsg, setErrorMsg] = useState(null);
 
-    const setUser = useSetRecoilState(userState);   
-    const login = async () => {
-      try {
-        const data = await loginApi.login(username, password);
-        setUser({
-          loggedIn: true,
-          access: data.access,
-          refresh: data.refresh,
-        });
-        setUsername('');
-        setPassword('');
-        setErrorMsg(null);
-        await SecureStore.setItemAsync('access', data.access);
-        navigation.goBack();
-      } catch (error) {
-        setUser({ loggedIn: false, access: null, refresh: null });
-        setErrorMsg('Usuário ou senha inválidos!');
-        await SecureStore.deleteItemAsync('access');
-      }
-    };
+    const handleLogin = () => {
+        navigation.navigate('AreaRestrita');
+      };
     
     return(
         <KeyboardAvoidingView style={[css.container, css.backcolor]}>
@@ -46,7 +27,7 @@ export default function Login({navigation}) {
                         style={css.placeholderLogin} 
                         placeholder='Usuário:'
                         value={username}
-                        onChangeText={setUsername}  
+                        onChangeText={(username) => setUsername(username)}
                     />
                 </View>
                 <View style={css.textinput}>
@@ -56,16 +37,15 @@ export default function Login({navigation}) {
                         placeholder='Senha:'
                         secureTextEntry={true}
                         value={password}
-                        onChangeText={setPassword}
+                        onChangeText={(password) => setPassword(password)}
                     />
                     <TouchableOpacity style={css.iconeye}>
                         <Icon name="eye" size={20} color='grey' />
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity  onPress={() =>  login('AreaRestrita')}>
+                <TouchableOpacity  onPress={handleLogin}>
                     <Text style={css.textinputbtn}>Entrar</Text>
-                    <Text>{errorMsg}</Text>
                 </TouchableOpacity>
             </View>
 
