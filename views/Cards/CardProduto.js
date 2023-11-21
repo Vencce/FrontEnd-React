@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { StyleSheet, View, Image, TouchableOpacity, Text, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Image,
+  TouchableOpacity,
+  Text,
+  ScrollView,
+} from "react-native";
 import movelService from "../../seeders/services/moveis";
 import Icon from "react-native-vector-icons/FontAwesome";
 
@@ -44,7 +51,7 @@ const CardProduto = ({ route }) => {
             </View>
             <View style={styles.car_des}>
               <View>
-                <Text style={{fontSize: 30, }}>R${movel.preco}</Text>
+                <Text style={{ fontSize: 30 }}>R${movel.preco}</Text>
               </View>
               <View style={styles.compras}>
                 <Text style={styles.comprar}>Comprar</Text>
@@ -64,20 +71,19 @@ const styles = StyleSheet.create({
     marginTop: 28,
   },
   comprar: {
-    textAlign: 'center',
+    textAlign: "center",
     padding: 10,
-    fontWeight: 'bold',
-    color: 'orange'
+    fontWeight: "bold",
+    color: "orange",
   },
   compras: {
-    backgroundColor: '#ffcc50',
+    backgroundColor: "#ffcc50",
     borderRadius: 10,
-    width: '25%',
-
+    width: "25%",
   },
   car_des: {
-    width: '100%',
-    height: 'auto',
+    width: "100%",
+    height: "auto",
     flexDirection: "row",
     justifyContent: "space-between",
     padding: 15,

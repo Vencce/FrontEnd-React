@@ -295,6 +295,15 @@ const css = StyleSheet.create({
     marginTop: 10
   },
 
+  //-------------------------------------Img parte de cima-------------------------------------------------------//
+
+  backimg2: {
+    width: '80%',
+    height: 65,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
 });
 
 export {css};

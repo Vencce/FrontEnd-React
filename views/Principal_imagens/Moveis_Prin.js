@@ -37,23 +37,11 @@ export default function MoveisHead({ navigation }) {
     BuscarDados();
   }, []);
 
+
   return (
     <SafeAreaView style={[css.container, css.containerTop]}>
       <MenuAreaRestrita title="Principal" navigation={navigation} />
       <ScrollView>
-        <View style={css.wellcome}>
-          <Image
-            style={css.imgPrin}
-            source={require("../../assets/Polt-Germany.png")}
-          />
-          <View style={css.text_bem}>
-            <Text style={{ fontSize: 25, fontWeight: "bold" }}>Seja Bem-Vindo</Text>
-            <Text>Bem Vindo 'nome do usuario'</Text>
-            <TouchableOpacity style={css.button_prin}>
-              <View style={{ padding: 5 }}><Text>Ver mais</Text></View>
-            </TouchableOpacity>
-          </View>
-        </View>
 
         <ScrollView horizontal={true} style={{ width: 400, marginLeft: 10 }}>
           {Categorias.map((Categoria) => (
