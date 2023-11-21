@@ -176,7 +176,7 @@ const css = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#df7d0c',
-    height: '12%',
+    height: '8%',
   },
 
   shadowProp: {
@@ -278,7 +278,7 @@ const css = StyleSheet.create({
     width: '100%',
     backgroundColor: 'orange',
     padding: 10,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
 
   text_bem: {
@@ -293,7 +293,7 @@ const css = StyleSheet.create({
     color: 'orange',
     borderRadius: 20,
     marginTop: 10
-  }
+  },
 
 });
 

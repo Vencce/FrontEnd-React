@@ -4,14 +4,13 @@ import { View, Text, StyleSheet } from "react-native";
 function Cardcategoria(props) {
   return (
     <View style={styles.cardcate}>
-        <Text  style={{whiteSpace: "nowrap", width: "fit-content"}}> {props.categoria.descricao} </Text>
+        <Text numberOfLines={1} ellipsizeMode="tail"> {props.categoria.descricao} </Text>
     </View> 
   );
 }
 
 const styles = StyleSheet.create({
   cardcate: {
-    width: 'min-content',
     height: 'auto',
     marginTop: 15,
     marginRight: 20,
