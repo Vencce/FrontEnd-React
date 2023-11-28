@@ -304,6 +304,10 @@ const css = StyleSheet.create({
     alignItems: 'center',
   },
 
+  colunas: {
+    flexDirection: 'column'
+  },
+
 });
 
 export {css};

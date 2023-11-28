@@ -37,20 +37,19 @@ export default function MoveisHead({ navigation }) {
     BuscarDados();
   }, []);
 
-
   return (
     <SafeAreaView style={[css.container, css.containerTop]}>
       <MenuAreaRestrita title="Principal" navigation={navigation} />
       <ScrollView>
 
-        <ScrollView horizontal={true} style={{ width: 400, marginLeft: 10 }}>
+      <ScrollView horizontal={true} style={{ width: 400, marginLeft: 10 }}>
           {Categorias.map((Categoria) => (
             <Cardcategoria key={Categoria.id} categoria={Categoria} />
           ))}
         </ScrollView>
-
+        
         <ScrollView>
-          <View>
+          <View style={css.colunas}>
             {Moveis.map((Movel) => (
               <TouchableOpacity
                 key={Movel.id}
