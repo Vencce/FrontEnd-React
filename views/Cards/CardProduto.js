@@ -10,7 +10,7 @@ import {
 import movelService from "../../seeders/services/moveis";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-const CardProduto = ({ route }) => {
+const CardProduto = ({ route, navigation }) => {
   const moveisId = route.params.movel;
 
   const [movel, setMovel] = useState({});
@@ -24,20 +24,22 @@ const CardProduto = ({ route }) => {
   }, [moveisId]);
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} scrollEnabled={false} >
       {movel.id && (
         <>
           <View style={styles.top}>
-            <TouchableOpacity>
-              <Icon name="arrow-left" size={20} color="white" />
+            <TouchableOpacity
+              onPress={() => navigation.goBack()}
+            >
+              <Icon name="arrow-left" size={25} color="white" />
             </TouchableOpacity>
 
-            <Text style={{ color: "white", fontSize: 20 }}>
+            <Text style={{ color: "white", fontSize: 25 }}>
               Detalhe do Produto
             </Text>
 
             <TouchableOpacity>
-              <Icon name="heart" size={20} color="white" />
+              <Icon name="heart" size={25} color="white" />
             </TouchableOpacity>
           </View>
 
@@ -67,19 +69,22 @@ const CardProduto = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "orange",
-    height: "100%",
+    height: "auto",
     marginTop: 28,
+    flex: 1,
+
   },
   comprar: {
     textAlign: "center",
     padding: 10,
     fontWeight: "bold",
-    color: "orange",
+    color: "white",
+    fontSize: 20
   },
   compras: {
-    backgroundColor: "#ffcc50",
+    backgroundColor: "orange",
     borderRadius: 10,
-    width: "25%",
+    width: "40%",
   },
   car_des: {
     width: "100%",
@@ -90,12 +95,15 @@ const styles = StyleSheet.create({
   },
   descriçao: {
     width: "100%",
-    height: "100%",
+    flex: 1,
+    height: 500,
     backgroundColor: "white",
   },
   top: {
     width: "100%",
     height: "auto",
+    flex: 1,
+
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
