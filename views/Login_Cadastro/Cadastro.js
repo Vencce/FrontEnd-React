@@ -18,15 +18,8 @@ export default function Cadastro({navigation})
                     <TextInput style={css.placeholderLogin} placeholder='Usuário:'/>
                 </View>
                 <View style={css.textinput}>
-                    <Icon name="envelope" size={20} color='grey'/>
-                    <TextInput style={css.placeholderLogin} placeholder='Email:'/>
-                </View>
-                <View style={css.textinput}>
                     <Icon name="lock" size={20} color='grey'/>
                     <TextInput style={css.placeholderLogin} placeholder='Senha:'/>
-                    <TouchableOpacity style={css.iconeye}>
-                        <Icon name="eye" size={20} color='grey' />
-                    </TouchableOpacity>
                 </View>
 
                 <TouchableOpacity  onPress={() =>  navigation.navigate('Login')}>

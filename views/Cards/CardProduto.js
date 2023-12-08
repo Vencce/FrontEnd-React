@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Text,
   ScrollView,
+  Alert,
 } from "react-native";
 import movelService from "../../seeders/services/moveis";
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -22,15 +23,16 @@ const CardProduto = ({ route, navigation }) => {
   useEffect(() => {
     fecthMovel();
   }, [moveisId]);
+  const exibirAlerta = () => {
+    Alert.alert("Função em desenvolvimento", "Esta função ainda não foi implementada");
+  };
 
   return (
-    <ScrollView style={styles.container} scrollEnabled={false} >
+    <ScrollView style={styles.container} scrollEnabled={false}>
       {movel.id && (
         <>
           <View style={styles.top}>
-            <TouchableOpacity
-              onPress={() => navigation.goBack()}
-            >
+            <TouchableOpacity onPress={() => navigation.goBack()}>
               <Icon name="arrow-left" size={25} color="white" />
             </TouchableOpacity>
 
@@ -38,7 +40,7 @@ const CardProduto = ({ route, navigation }) => {
               Detalhe do Produto
             </Text>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={exibirAlerta}>
               <Icon name="heart" size={25} color="white" />
             </TouchableOpacity>
           </View>
@@ -55,9 +57,9 @@ const CardProduto = ({ route, navigation }) => {
               <View>
                 <Text style={{ fontSize: 30 }}>R${movel.preco}</Text>
               </View>
-              <View style={styles.compras}>
+              <TouchableOpacity onPress={exibirAlerta} style={styles.compras}>
                 <Text style={styles.comprar}>Comprar</Text>
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
         </>
@@ -72,14 +74,13 @@ const styles = StyleSheet.create({
     height: "auto",
     marginTop: 28,
     flex: 1,
-
   },
   comprar: {
     textAlign: "center",
     padding: 10,
     fontWeight: "bold",
     color: "white",
-    fontSize: 20
+    fontSize: 20,
   },
   compras: {
     backgroundColor: "orange",

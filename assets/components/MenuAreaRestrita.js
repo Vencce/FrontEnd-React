@@ -20,7 +20,7 @@ export default function MenuAreaRestrita(props){
             </View>
 
             <TouchableOpacity onPress={()=>logout()}>
-                <Icon name="sign-out" size={20} color="#000" />
+                <Icon name="sign-out" size={30} color="#000" />
             </TouchableOpacity>
         </View>
     );
