@@ -91,7 +91,7 @@ export default function Login({ navigation }) {
         <Text style={css.cadastro}>Não tem conta? cadastre-se!</Text>
       </TouchableOpacity>
 
-      <Text>{errorMsg}</Text>
+      <Text style={{color: 'white'}}>{errorMsg}</Text>
       <View style={css.nadabranco}></View>
     </KeyboardAvoidingView>
   );

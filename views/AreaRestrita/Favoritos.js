@@ -8,7 +8,7 @@
     
      return (
          <View style={[css.container, css.containerTop]}>
-             <Text style={{fontSize: 40}}>Seus Favoritos</Text>
+             <Text style={{fontSize: 40, marginTop: 20}}>Seus Favoritos</Text>
          </View>
      );
  }

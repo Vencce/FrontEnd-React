@@ -8,10 +8,18 @@ import {
   Image,
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export default function Usuario({ navigation }) {
+
+export default function Usuario({ navigation, props }) {
+
+  async function logout()
+    {
+      await AsyncStorage.clear();
+      props.navigation.navigate('Login');
+    }
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} scrollEnabled={false}>
       <View style={styles.top}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Icon name="arrow-left" size={25} color="white" />
@@ -35,16 +43,13 @@ export default function Usuario({ navigation }) {
           </View>
         </View>
         <View style={styles.acao}>
-          <TouchableOpacity style={{ marginTop: 20 }}>
-            <Text style={{ fontSize: 20 }}>Alterar Senha</Text>
+          <TouchableOpacity style={{ marginTop: 20, backgroundColor: 'grey', borderRadius: 7, }}>
+            <Text style={{ fontSize: 20, color: 'white', padding: 10 }}>Alterar Senha</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{ marginTop: 20 }}>
-            <Text style={{ fontSize: 20 }}>Sair</Text>
+          <TouchableOpacity style={{ marginTop: 20, backgroundColor: 'grey', borderRadius: 7, marginLeft: 40}} onPress={()=>logout()}>
+            <Text style={{ fontSize: 20, color: 'white', padding: 10 }}>Sair</Text>
           </TouchableOpacity>
         </View>
-      </View>
-      <View style={styles.baixo}>
-        <Text style={{ fontSize: 20 }}>Produtos Cadastrados</Text>
       </View>
     </ScrollView>
   );
@@ -56,14 +61,6 @@ const styles = StyleSheet.create({
     height: "auto",
     marginTop: 28,
     flex: 1,
-  },
-  baixo:{
-    backgroundColor: 'white',
-    height: 50,
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-
   },
   acao: {
     alignItems: 'center',
@@ -81,7 +78,7 @@ const styles = StyleSheet.create({
   },
   perfil: {
     backgroundColor: "white",
-    height: 'auto',
+    height: 1000,
     width: "100%",
     padding: 10,
     borderTopLeftRadius: 50,

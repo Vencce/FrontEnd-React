@@ -7,7 +7,7 @@ export default function Carrinho({navigation}){
 
     return (
         <View style={[css.container, css.containerTop]}>
-            <Text style={{fontSize: 40}}>Seu Carrinho</Text>
+            <Text style={{fontSize: 40, marginTop: 20}}>Seu Carrinho</Text>
         </View>
     );
 }
